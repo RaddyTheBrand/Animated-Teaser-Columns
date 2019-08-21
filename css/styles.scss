@@ -36,7 +36,7 @@ header {
 
 section.hero {
     background-color: #000;
-    height: 36vw;
+    height: 6vw;
     background-image: url("/images/hero.jpg");
     background-size: cover;
 }
@@ -185,5 +185,40 @@ section.teasers {
 
 
         }
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    section.teasers ul {
+        grid-template-columns: 1fr;
+
+        li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4) {
+            height: 371px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            background-size: cover;
+
+            &:hover {
+                height: 371px;
+                margin-top: 0;
+
+                .callout {
+                    bottom: 0;
+                }
+
+            }
+
+        }
+
+        li:nth-child(1) .callout, li:nth-child(2) .callout, li:nth-child(3) .callout, li:nth-child(4) .callout {
+            bottom: 10px;
+        }
+
+        li {
+            a {
+                opacity: 1;
+            }
+        }
+
     }
 }
